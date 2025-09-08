@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>co.unicauca.microKernelCore</groupId>
+    <artifactId>core</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>co.unicauca.microKernelHtml</groupId>
+            <artifactId>report-html-plugin</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>co.unicauca.microKernelJson</groupId>
+            <artifactId>report-json-plugin</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>runtime</scope>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>co.unicauca.microKernelCommon</groupId>
+            <artifactId>Common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>21</maven.compiler.release>
+        <exec.mainClass>co.unicauca.core.app.Application</exec.mainClass>
+    </properties>
+</project>

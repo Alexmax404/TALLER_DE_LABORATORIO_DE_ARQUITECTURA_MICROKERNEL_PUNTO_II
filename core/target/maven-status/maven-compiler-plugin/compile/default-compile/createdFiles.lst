@@ -1,0 +1,5 @@
+co\unicauca\core\business\ReportService.class
+co\unicauca\core\plugin\presentation\Console.class
+co\unicauca\core\app\Application.class
+co\unicauca\core\plugin\manager\ReportPluginManager.class
+co\unicauca\core\business\ProjectService.class
