@@ -2,6 +2,9 @@ package co.unicauca.json.plugin;
 
 import co.unicauca.common.interfaces.IReportPlugin;
 import co.unicauca.common.entities.Project;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 import java.time.format.DateTimeFormatter;
 /**
@@ -10,7 +13,7 @@ import java.time.format.DateTimeFormatter;
  */
 public class ReportJsonPlugin implements IReportPlugin{
 
-    @Override
+@Override
 public String generateReport(List<Project> data) {
     StringBuilder sb = new StringBuilder();
     sb.append("[\n");
@@ -42,7 +45,17 @@ public String generateReport(List<Project> data) {
         sb.append("\n");
     }
     sb.append("]");
-    return sb.toString();
+    String json = sb.toString();
+    
+    // Guardar en archivo reporte.json
+    try {
+        Files.write(Paths.get("reporte.json"), json.getBytes());
+        System.out.println("Archivo 'reporte.json' generado con exito.");
+    } catch (IOException e) {
+            e.printStackTrace();
+    }
+    
+    return json;
 }
 
 

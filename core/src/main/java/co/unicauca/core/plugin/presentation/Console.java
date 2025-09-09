@@ -1,4 +1,3 @@
-
 package co.unicauca.core.plugin.presentation;
 
 import co.unicauca.core.business.ProjectService;
@@ -23,39 +22,35 @@ public class Console {
 
         do {
             System.out.println();
-            System.out.println("1. Generar reporte en HTML");
-            System.out.println("2. Generar reporte en JSON");
-            System.out.println("3. Salir");
+            System.out.println("1. Generar reporte");
+            System.out.println("2. Salir");
 
             option = scanner.nextInt();
-            scanner.nextLine(); // consumir salto de línea
+            scanner.nextLine(); 
 
             switch (option) {
                 case 1:
-                    handleReportOption("html");
+                    askReportType();
                     break;
                 case 2:
-                    handleReportOption("json");
-                    break;
-                case 3:
                     System.out.println("Aplicacion terminada.");
                     break;
                 default:
-                    System.out.println("Opcion no válida.");
+                    System.out.println("Opcion no valida.");
                     break;
             }
 
-        } while (option != 3);
+        } while (option != 2);
     }
 
-    private void handleReportOption(String reportType) {
-        try {
-            // Generar el reporte con los proyectos disponibles
-            String report = reportService.generateReport(projectService.getAll(), reportType);
+    private void askReportType() {
+        System.out.print("Ingrese el tipo de reporte: ");
+        String reportType = scanner.nextLine().trim().toLowerCase();
 
+        try {
+            String report = reportService.generateReport(projectService.getAll(), reportType);
             System.out.println("\n=== REPORTE " + reportType.toUpperCase() + " ===");
             System.out.println(report);
-
         } catch (Exception e) {
             System.out.println("Error al generar el reporte: " + e.getMessage());
         }

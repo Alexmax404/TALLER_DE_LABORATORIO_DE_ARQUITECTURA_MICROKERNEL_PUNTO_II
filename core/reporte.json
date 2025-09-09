@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "nombre": "Sistema de Gestion de Tesis",
+    "fechaFormatoA": "15/03/2025",
+    "estudiante1": "Carlos Lopez",
+    "estudiante2": "Maria Gomez",
+    "profesor": "Dr. Perez",
+    "tipo": "Aplicacion Web",
+    "programa": "Ingenieria de Sistemas"
+  },
+  {
+    "id": "2",
+    "nombre": "Sistema de Monitoreo Predictivo para Motores Electricos usando IoT",
+    "fechaFormatoA": "10/06/2025",
+    "estudiante1": "Luis Ramirez",
+    "estudiante2": null,
+    "profesor": "Ing. Fernando Castillo",
+    "tipo": "Proyecto de Automatizacion",
+    "programa": "Ingenieria en Automatica Industrial"
+  }
+]

@@ -39,12 +39,6 @@ public class ReportPluginManager {
 
     }
 
-    /**
-     * Retorna un plugin según el tipo de reporte solicitado (ej. "html", "json")
-     *
-     * @param reportType tipo de reporte definido en plugin.properties
-     * @return instancia de IReportPlugin o null si no existe
-     */
     public IReportPlugin getReportPlugin(String reportType) {
         String propertyName = "report." + reportType.toLowerCase();
 
